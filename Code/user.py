@@ -47,10 +47,10 @@ class CompteUtilisateur:
         print("Informations personnelles mises à jour avec succès.")
 
 if __name__ == "__main__":
-    # Instantiate a CompteUtilisateur object by providing the required arguments
+
     prenom = input("Entrez votre prénom : ")
     nom = input("Entrez votre nom : ")
     email = input("Entrez votre email : ")
     mot_de_passe = input("Entrez votre mot de passe : ")
     user_ = CompteUtilisateur(prenom, nom, email, mot_de_passe)
-    # You can call methods of the user_ object here as needed
+   

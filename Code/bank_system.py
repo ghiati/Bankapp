@@ -1,4 +1,7 @@
 import re
+from user import CompteUtilisateur
+from BankDatabase import users_collection, historique_collection
+from Insert_user import InsertUsers
 
 class SystemeBancaire:
     def __init__(self):
@@ -82,6 +85,7 @@ class SystemeBancaire:
                 email = input("Entrez votre email : ")
                 mot_de_passe = input("Entrez votre mot de passe : ")
                 compte = self.connexion(email, mot_de_passe)
+
                 if compte:
                     while True:
                         print("\nMenu du Compte :")
@@ -103,8 +107,11 @@ class SystemeBancaire:
                 email = input("Entrez votre email : ")
                 mot_de_passe = input("Entrez votre mot de passe : ")
                 rib = input("Entrez votre RIB (12 chiffres) : ")
+                InsertUsers.inscription_users(prenom, nom, email, mot_de_passe, rib)
                 compte = self.inscription(prenom, nom, email, mot_de_passe, rib)
+
                 if compte:
+                    
                     while True:
                         print("\nMenu du Compte :")
                         print("1. Dépôt")
@@ -129,4 +136,3 @@ class SystemeBancaire:
 if __name__ == "__main__":
     systeme_bancaire = SystemeBancaire()
     systeme_bancaire.demarrer()
-

@@ -1,4 +1,4 @@
-from pymongo import MongoClient #nous avons besoin mosieur de Pymongo pour faire la connection entre python et mongo db 
+from pymongo import MongoClient #on va utilise mongo db pour stoque les information de l'utilisateur 
 
 
 client = MongoClient('mongodb://localhost:27017/')

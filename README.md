@@ -22,7 +22,7 @@ Before running the program, ensure you have the following installed:
 2. Install the required Python packages:
 
    ```bash
-   pip install -r requirements.txt
+   pip install pymongo
    ```
 
 3. Start MongoDB service on your local machine.
@@ -35,7 +35,7 @@ Before running the program, ensure you have the following installed:
 
 ## Project Structure
 
-The project follows the following structure is so simple :
+The project follows the following structure :
 
 ```
 bank-system/
@@ -43,7 +43,8 @@ bank-system/
 ├── bank_system.py           # Main script for running the bank system
 ├── user.py                  # User class definition
 │── BankDatabase.py      # Script for database connection and collections
-└│── Insert_user.py       # Script for inserting user data into the database
+|── check_users.py       # Just checking the users that exist in our database
+│── Insert_user.py       # Script for inserting user data into the database
 
 ## Usage
 
@@ -54,4 +55,5 @@ bank-system/
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues or pull requests if you find any bugs or have suggestions for improvements.
+Thank U 
 

@@ -52,8 +52,6 @@ bank-system/
 - Create an account or log in using existing credentials.
 - Perform banking operations such as deposit, withdrawal, transfer, etc.
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests if you find any bugs or have suggestions for improvements.
 Thank U 
 

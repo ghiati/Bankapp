@@ -1,57 +1,42 @@
 # Bank System
 
-This is a simple console-based bank system implemented in Python. It allows users to perform various banking operations such as creating an account, logging in, depositing and withdrawing funds, transferring money between accounts, and updating account information.
+This is a simple console-based bank system implemented in Python. It allows users to perform various banking operations such as account creation, deposit, withdrawal, balance check, and transfer.
 
-## Getting Started
-
-### Prerequisites
-
-Before running the program, ensure you have the following installed:
-
-- Python 3.x
-- MongoDB
-
-### Setup
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/ghiati/bank-system.git
-   ```
-
-2. Install the required Python packages:
-
-   ```bash
-   pip install pymongo
-   ```
-
-3. Start MongoDB service on your local machine.
-
-4. Run the main program:
-
-   ```bash
-   python bank_system.py
-   ```
-
-## Project Structure
-
-The project follows the following structure :
+## Directory Structure
 
 ```
-bank-system/
+BankApp/
 │
-├── bank_system.py           # Main script for running the bank system
-├── user.py                  # User class definition
-│── BankDatabase.py      # Script for database connection and collections
-|── check_users.py       # Just checking the users that exist in our database
-│── Insert_user.py       # Script for inserting user data into the database
+├── bank_system.py            # Main script for the bank system
+│
+├── DataBase/                 # Directory containing database-related files
+│   ├── __init__.py           # Empty initialization file
+│   ├── BankDatabase.py       # Module for database connection and collections
+│   ├── Insert_user.py        # Module for inserting user data into the database
+│
+└── user/                     # Directory containing user-related files
+    ├── __init__.py           # Empty initialization file
+    ├── user.py               # Module for defining user accounts
+```
 
 ## Usage
 
-- Follow the on-screen prompts to navigate through the menu options.
-- Create an account or log in using existing credentials.
-- Perform banking operations such as deposit, withdrawal, transfer, etc.
+1. Run `bank_system.py` to start the bank system console application.
+2. Follow the on-screen instructions to perform various banking operations.
 
+## Requirements
 
-Thank U 
+- Python 3.x
+- MongoDB
+- pymongo library
+
+## How to Run
+
+1. Install Python 3.x on your system.
+2. Install MongoDB and make sure it's running on your local machine.
+3. Install the pymongo library using pip: `pip install pymongo`.
+4. Run `bank_system.py` using Python: `python bank_system.py`.
+
+Thank U :)
+
 

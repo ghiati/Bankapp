@@ -92,14 +92,33 @@ class SystemeBancaire:
                         print("1. Dépôt")
                         print("2. Retrait")
                         print("3. Vérifier Solde")
-                        print("4. Déconnexion")
-                        print("5. Transfert d'argent")
-                        print("6. Modifier Informations Personnelles")
+                        print("4. Transfert d'argent")
+                        print("5. Modifier Informations Personnelles")
+                        print("6. Déconnexion")
 
                         option = input("Entrez votre option : ")
-                        if option == '4':
+                        if option == '6':
                             break
-                        self.traiter_transaction(compte, option)
+                        elif option == '1':
+                            montant = float(input("Entrez le montant à déposer : "))
+                            compte.deposer(montant)
+                        elif option == '2':
+                            montant = float(input("Entrez le montant à retirer : "))
+                            compte.retirer(montant)
+                        elif option == '3':
+                            compte.afficher_solde()
+                        elif option == '4':
+                            rib_destinataire = input("Entrez le RIB du destinataire : ")
+                            montant = float(input("Entrez le montant à transférer : "))
+                            compte.transfert(rib_destinataire, montant)
+                        elif option == '5':
+                            nouveau_prenom = input("Entrez le nouveau prénom : ")
+                            nouveau_nom = input("Entrez le nouveau nom : ")
+                            nouveau_email = input("Entrez le nouvel email : ")
+                            nouveau_mot_de_passe = input("Entrez le nouveau mot de passe : ")
+                            compte.modifier_informations_personnelles(nouveau_prenom, nouveau_nom, nouveau_email, nouveau_mot_de_passe)
+                        else:
+                            print("Option invalide. Veuillez réessayer.")
 
             elif choix == '2':
                 prenom = input("Entrez votre prénom : ")
@@ -111,20 +130,38 @@ class SystemeBancaire:
                 compte = self.inscription(prenom, nom, email, mot_de_passe, rib)
 
                 if compte:
-                    
                     while True:
                         print("\nMenu du Compte :")
                         print("1. Dépôt")
                         print("2. Retrait")
                         print("3. Vérifier Solde")
-                        print("4. Déconnexion")
-                        print("5. Transfert d'argent")
-                        print("6. Modifier Informations Personnelles")
+                        print("4. Transfert d'argent")
+                        print("5. Modifier Informations Personnelles")
+                        print("6. Déconnexion")
 
                         option = input("Entrez votre option : ")
-                        if option == '4':
+                        if option == '6':
                             break
-                        self.traiter_transaction(compte, option)
+                        elif option == '1':
+                            montant = float(input("Entrez le montant à déposer : "))
+                            compte.deposer(montant)
+                        elif option == '2':
+                            montant = float(input("Entrez le montant à retirer : "))
+                            compte.retirer(montant)
+                        elif option == '3':
+                            compte.afficher_solde()
+                        elif option == '4':
+                            rib_destinataire = input("Entrez le RIB du destinataire : ")
+                            montant = float(input("Entrez le montant à transférer : "))
+                            compte.transfert(rib_destinataire, montant)
+                        elif option == '5':
+                            nouveau_prenom = input("Entrez le nouveau prénom : ")
+                            nouveau_nom = input("Entrez le nouveau nom : ")
+                            nouveau_email = input("Entrez le nouvel email : ")
+                            nouveau_mot_de_passe = input("Entrez le nouveau mot de passe : ")
+                            compte.modifier_informations_personnelles(nouveau_prenom, nouveau_nom, nouveau_email, nouveau_mot_de_passe)
+                        else:
+                            print("Option invalide. Veuillez réessayer.")
 
             elif choix == '3':
                 print("Merci d'utiliser le Système Bancaire Console !")

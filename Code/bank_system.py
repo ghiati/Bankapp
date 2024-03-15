@@ -1,7 +1,7 @@
 import re
-from user import CompteUtilisateur
-from BankDatabase import users_collection, historique_collection
-from Insert_user import InsertUsers
+from user.user import CompteUtilisateur
+from DataBase.BankDatabase import users_collection
+from DataBase.Insert_user import InsertUsers
 
 class SystemeBancaire:
     def __init__(self):

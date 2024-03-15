@@ -1,5 +1,6 @@
 import random
 
+
 class CompteUtilisateur:
     def __init__(self, prenom, nom, email, mot_de_passe, solde=0):
         self.prenom = prenom
@@ -39,7 +40,7 @@ class CompteUtilisateur:
 
     def transfert(self, destinataire_rib, montant):
         try:
-            montant = float(montant)  # Convert input to float
+            montant = float(montant) 
             if montant > 0 and self.solde >= montant:
                 print(f"Transfert de {montant} DH effectué avec succès vers le compte RIB {destinataire_rib}.")
                 self.solde -= montant
